@@ -6,7 +6,7 @@ management:
   generationVersion: 2.17.8
 generation:
   telemetryEnabled: false
-  sdkClassName: Orders
+  sdkClassName: Klarna
   sdkFlattening: true
   singleTagPerOp: false
 python:
