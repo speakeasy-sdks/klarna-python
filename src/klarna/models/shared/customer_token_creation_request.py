@@ -6,7 +6,7 @@ from ..shared import address as shared_address
 from ..shared import customer as shared_customer
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from sdk import utils
+from klarna import utils
 from typing import Optional
 
 class CustomerTokenCreationRequestIntendedUseEnum(str, Enum):

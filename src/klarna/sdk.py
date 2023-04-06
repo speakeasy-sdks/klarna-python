@@ -6,14 +6,14 @@ from .authorizations import Authorizations
 from .orders import Orders
 from .sessions import Sessions
 from .tokens import Tokens
-from sdk.models import shared
+from klarna.models import shared
 
 SERVERS = [
     "https://api.klarna.com",
 ]
 """Contains the list of servers available to the SDK"""
 
-class SDK:
+class Klarna:
     r"""The payments API is used to create a session to offer Klarna's payment methods as part of your checkout. As soon as the purchase is completed the order should be read and handled using the [`Order Management API`](https://docs.klarna.com/api/ordermanagement).
     
     Read more on [Klarna payments](https://docs.klarna.com/klarna-payments/).
@@ -32,7 +32,7 @@ class SDK:
     _security_client: requests_http.Session
     _server_url: str = SERVERS[0]
     _language: str = "python"
-    _sdk_version: str = "1.0.0"
+    _sdk_version: str = "1.0.1"
     _gen_version: str = "2.17.8"
 
     def __init__(self,

@@ -2,7 +2,7 @@
 
 import requests as requests_http
 from . import utils
-from sdk.models import operations
+from klarna.models import operations
 
 class Authorizations:
     r"""Operations related to authorizations"""

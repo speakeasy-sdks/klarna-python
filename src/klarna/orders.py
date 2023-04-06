@@ -2,7 +2,7 @@
 
 import requests as requests_http
 from . import utils
-from sdk.models import operations, shared
+from klarna.models import operations, shared
 from typing import Optional
 
 class Orders:

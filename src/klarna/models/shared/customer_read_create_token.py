@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
-from sdk import utils
+from klarna import utils
 from typing import Optional
 
 
