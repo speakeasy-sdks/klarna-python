@@ -5,7 +5,7 @@ import dataclasses
 from ..shared import address as shared_address
 from ..shared import customer_read_create_token as shared_customer_read_create_token
 from dataclasses_json import Undefined, dataclass_json
-from sdk import utils
+from klarna import utils
 from typing import Optional
 
 

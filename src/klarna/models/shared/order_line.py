@@ -5,7 +5,7 @@ import dataclasses
 from ..shared import product_identifiers as shared_product_identifiers
 from ..shared import subscription as shared_subscription
 from dataclasses_json import Undefined, dataclass_json
-from sdk import utils
+from klarna import utils
 from typing import Optional
 
 

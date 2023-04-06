@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 from ..shared import asset_urls as shared_asset_urls
 from dataclasses_json import Undefined, dataclass_json
-from sdk import utils
+from klarna import utils
 from typing import Optional
 
 

@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from sdk import utils
+from klarna import utils
 
 class SubscriptionIntervalEnum(str, Enum):
     r"""The cadence unit for this."""
