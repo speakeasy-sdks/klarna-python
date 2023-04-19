@@ -47,3 +47,11 @@ Based on:
 - Speakeasy CLI 1.20.1 (2.18.1) https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [PyPI v0.0.1] https://pypi.org/project/klarna-orders/0.0.1 - .
+
+## 2023-04-19 01:04:55
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 https://prod.speakeasyapi.dev/v1/apis/orders/version/v1/schema/download
+- Speakeasy CLI 1.20.2 (2.18.2) https://github.com/speakeasy-api/speakeasy
+### Releases
+- [PyPI v0.0.2] https://pypi.org/project/klarna-orders/0.0.2 - .
