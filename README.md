@@ -21,7 +21,7 @@ pip install klarna-orders
 <!-- Start SDK Example Usage -->
 ```python
 import klarna
-from klarna.models import operations, shared
+from klarna.models import operations
 
 s = klarna.Klarna(
     security=shared.Security(
@@ -33,7 +33,7 @@ s = klarna.Klarna(
 req = operations.CancelAuthorizationRequest(
     authorization_token="corrupti",
 )
-    
+
 res = s.authorizations.cancel(req)
 
 if res.status_code == 200:
@@ -45,23 +45,23 @@ if res.status_code == 200:
 ## Available Resources and Operations
 
 
-### authorizations
+### [authorizations](docs/authorizations/README.md)
 
-* `cancel` - Cancel an existing authorization
+* [cancel](docs/authorizations/README.md#cancel) - Cancel an existing authorization
 
-### orders
+### [orders](docs/orders/README.md)
 
-* `create` - Create a new order
+* [create](docs/orders/README.md#create) - Create a new order
 
-### sessions
+### [sessions](docs/sessions/README.md)
 
-* `create` - Create a new payment session
-* `read` - Read an existing payment session
-* `update` - Update an existing payment session
+* [create](docs/sessions/README.md#create) - Create a new payment session
+* [read](docs/sessions/README.md#read) - Read an existing payment session
+* [update](docs/sessions/README.md#update) - Update an existing payment session
 
-### tokens
+### [tokens](docs/tokens/README.md)
 
-* `purchase` - Generate a consumer token
+* [purchase](docs/tokens/README.md#purchase) - Generate a consumer token
 <!-- End SDK Available Operations -->
 
 ### Maturity

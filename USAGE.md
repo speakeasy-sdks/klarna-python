@@ -1,7 +1,7 @@
 <!-- Start SDK Example Usage -->
 ```python
 import klarna
-from klarna.models import operations, shared
+from klarna.models import operations
 
 s = klarna.Klarna(
     security=shared.Security(
@@ -13,7 +13,7 @@ s = klarna.Klarna(
 req = operations.CancelAuthorizationRequest(
     authorization_token="corrupti",
 )
-    
+
 res = s.authorizations.cancel(req)
 
 if res.status_code == 200:
