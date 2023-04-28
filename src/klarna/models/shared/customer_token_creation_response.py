@@ -15,11 +15,16 @@ class CustomerTokenCreationResponse:
     r"""Token was successfully created."""
     
     token_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('token_id') }})
-    r"""Generated customer token. This token will be used to create a new order for the subscription using the Create a New order using token API."""  
-    billing_address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('billing_address'), 'exclude': lambda f: f is None }})  
-    customer: Optional[shared_customer_read_create_token.CustomerReadCreateToken] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer'), 'exclude': lambda f: f is None }})  
+
+    r"""Generated customer token. This token will be used to create a new order for the subscription using the Create a New order using token API."""
+    billing_address: Optional[shared_address.Address] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('billing_address'), 'exclude': lambda f: f is None }})
+
+    customer: Optional[shared_customer_read_create_token.CustomerReadCreateToken] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('customer'), 'exclude': lambda f: f is None }})
+
     payment_method_reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payment_method_reference'), 'exclude': lambda f: f is None }})
-    r"""Used to connect customers with payment method when it is present."""  
+
+    r"""Used to connect customers with payment method when it is present."""
     redirect_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('redirect_url'), 'exclude': lambda f: f is None }})
-    r"""URL to redirect the customer to after placing the order. This is a Klarna URL where Klarna will place a cookie in the customer’s browser (if redirected) and redirect the customer back to the confirmation URL provided by the merchant. This is not a mandatory step but a recommended one to improve the returning customer’s experience."""  
+
+    r"""URL to redirect the customer to after placing the order. This is a Klarna URL where Klarna will place a cookie in the customer’s browser (if redirected) and redirect the customer back to the confirmation URL provided by the merchant. This is not a mandatory step but a recommended one to improve the returning customer’s experience."""
     

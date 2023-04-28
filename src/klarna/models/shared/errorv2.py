@@ -13,10 +13,16 @@ from typing import Optional
 class ErrorV2:
     r"""We were unable to create a customer token with the provided data. Some field constraint was violated."""
     
-    authorized_payment_method: Optional[shared_authorized_payment_method.AuthorizedPaymentMethod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('authorized_payment_method'), 'exclude': lambda f: f is None }})  
-    correlation_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('correlation_id'), 'exclude': lambda f: f is None }})  
-    error_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error_code'), 'exclude': lambda f: f is None }})  
-    error_messages: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error_messages'), 'exclude': lambda f: f is None }})  
-    fraud_status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fraud_status'), 'exclude': lambda f: f is None }})  
-    reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reason'), 'exclude': lambda f: f is None }})  
+    authorized_payment_method: Optional[shared_authorized_payment_method.AuthorizedPaymentMethod] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('authorized_payment_method'), 'exclude': lambda f: f is None }})
+
+    correlation_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('correlation_id'), 'exclude': lambda f: f is None }})
+
+    error_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error_code'), 'exclude': lambda f: f is None }})
+
+    error_messages: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error_messages'), 'exclude': lambda f: f is None }})
+
+    fraud_status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fraud_status'), 'exclude': lambda f: f is None }})
+
+    reason: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reason'), 'exclude': lambda f: f is None }})
+
     

@@ -12,7 +12,9 @@ from typing import Optional
 class CustomerReadCreateToken:
     
     date_of_birth: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('date_of_birth'), 'exclude': lambda f: f is None }})
-    r"""Customer’s date of birth. The format is ‘yyyy-mm-dd’"""  
+
+    r"""Customer’s date of birth. The format is ‘yyyy-mm-dd’"""
     gender: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gender'), 'exclude': lambda f: f is None }})
-    r"""Customer’s gender - ‘male’ or ‘female’"""  
+
+    r"""Customer’s gender - ‘male’ or ‘female’"""
     

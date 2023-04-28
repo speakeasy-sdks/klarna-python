@@ -19,9 +19,12 @@ class SubscriptionIntervalEnum(str, Enum):
 class Subscription:
     
     interval: SubscriptionIntervalEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval') }})
-    r"""The cadence unit for this."""  
+
+    r"""The cadence unit for this."""
     interval_count: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interval_count') }})
-    r"""The number of intervals"""  
+
+    r"""The number of intervals"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    r"""The name of the subscription product"""  
+
+    r"""The name of the subscription product"""
     

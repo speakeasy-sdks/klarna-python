@@ -12,13 +12,18 @@ from typing import Optional
 class Options:
     
     color_border: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('color_border'), 'exclude': lambda f: f is None }})
-    r"""Color for the border of elements within the iFrame. Value should be a CSS hex color, e.g. \\"#FF9900\\" """  
+
+    r"""Color for the border of elements within the iFrame. Value should be a CSS hex color, e.g. \\"#FF9900\\" """
     color_border_selected: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('color_border_selected'), 'exclude': lambda f: f is None }})
-    r"""Color for the border of elements within the iFrame when selected by the customer. Value should be a CSS hex color, e.g. \\"#FF9900\\" """  
+
+    r"""Color for the border of elements within the iFrame when selected by the customer. Value should be a CSS hex color, e.g. \\"#FF9900\\" """
     color_details: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('color_details'), 'exclude': lambda f: f is None }})
-    r"""Color for the bullet points within the iFrame. Value should be a CSS hex color, e.g. \\"#FF9900\\" """  
+
+    r"""Color for the bullet points within the iFrame. Value should be a CSS hex color, e.g. \\"#FF9900\\" """
     color_text: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('color_text'), 'exclude': lambda f: f is None }})
-    r"""Color for the texts within the iFrame. Value should be a CSS hex color, e.g. \\"#FF9900\\" """  
+
+    r"""Color for the texts within the iFrame. Value should be a CSS hex color, e.g. \\"#FF9900\\" """
     radius_border: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('radius_border'), 'exclude': lambda f: f is None }})
-    r"""Radius for the border of elements within the iFrame."""  
+
+    r"""Radius for the border of elements within the iFrame."""
     

@@ -14,37 +14,52 @@ from typing import Optional
 class OrderLine:
     
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    r"""Descriptive name of the order line item."""  
+
+    r"""Descriptive name of the order line item."""
     quantity: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantity') }})
-    r"""Quantity of the order line item. Must be a non-negative number."""  
+
+    r"""Quantity of the order line item. Must be a non-negative number."""
     total_amount: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_amount') }})
+
     r"""Total amount of the order line. Must be defined as minor units. Includes tax and discount. Eg: 2500=25 euros
     Value = (quantity x unit_price) - total_discount_amount. 
     (max value: 100000000)
-    """  
+    """
     unit_price: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit_price') }})
-    r"""Price for a single unit of the order line. Must be defined as minor units. Includes tax, excludes discount. (max value: 100000000)"""  
+
+    r"""Price for a single unit of the order line. Must be defined as minor units. Includes tax, excludes discount. (max value: 100000000)"""
     image_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('image_url'), 'exclude': lambda f: f is None }})
+
     r"""URL to an image that can be later embedded in communications between Klarna and the customer. (max 1024 characters).
      A minimum of 250x250 px resolution is recommended for the image to look good in the Klarna app, and below 50x50 px won't even show. We recommend using a good sized image (650x650 px or more), however the file size must not exceed 12MB.
-    """  
+    """
     merchant_data: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('merchant_data'), 'exclude': lambda f: f is None }})
-    r"""Used for storing merchant's internal order number or other reference. Pass through field. (max 1024 characters)"""  
-    product_identifiers: Optional[shared_product_identifiers.ProductIdentifiers] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('product_identifiers'), 'exclude': lambda f: f is None }})  
+
+    r"""Used for storing merchant's internal order number or other reference. Pass through field. (max 1024 characters)"""
+    product_identifiers: Optional[shared_product_identifiers.ProductIdentifiers] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('product_identifiers'), 'exclude': lambda f: f is None }})
+
     product_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('product_url'), 'exclude': lambda f: f is None }})
-    r"""URL to the product in the merchant’s webshop that can be later used in communications between Klarna and the customer. (max 1024 characters)"""  
+
+    r"""URL to the product in the merchant’s webshop that can be later used in communications between Klarna and the customer. (max 1024 characters)"""
     quantity_unit: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantity_unit'), 'exclude': lambda f: f is None }})
-    r"""Unit used to describe the quantity, e.g. kg, pcs, etc. If defined the value has to be 1-8 characters."""  
+
+    r"""Unit used to describe the quantity, e.g. kg, pcs, etc. If defined the value has to be 1-8 characters."""
     reference: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reference'), 'exclude': lambda f: f is None }})
-    r"""Client facing article number, SKU or similar. Max length is 256 characters."""  
-    subscription: Optional[shared_subscription.Subscription] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('subscription'), 'exclude': lambda f: f is None }})  
+
+    r"""Client facing article number, SKU or similar. Max length is 256 characters."""
+    subscription: Optional[shared_subscription.Subscription] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('subscription'), 'exclude': lambda f: f is None }})
+
     tax_rate: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tax_rate'), 'exclude': lambda f: f is None }})
-    r"""Tax rate of the order line. Non-negative value. The percentage value is represented with two implicit decimals. I.e 1900 = 19%."""  
+
+    r"""Tax rate of the order line. Non-negative value. The percentage value is represented with two implicit decimals. I.e 1900 = 19%."""
     total_discount_amount: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_discount_amount'), 'exclude': lambda f: f is None }})
-    r"""Non-negative minor units. Includes tax. Eg: 500=5 euros"""  
+
+    r"""Non-negative minor units. Includes tax. Eg: 500=5 euros"""
     total_tax_amount: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_tax_amount'), 'exclude': lambda f: f is None }})
-    r"""Total tax amount of the order line. Must be within ±1 of total_amount - total_amount 10000 / (10000 + tax_rate). Negative when type is discount."""  
+
+    r"""Total tax amount of the order line. Must be within ±1 of total_amount - total_amount 10000 / (10000 + tax_rate). Negative when type is discount."""
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
+
     r"""Type of the order line item. The possible values are:
     
     physical
@@ -55,5 +70,5 @@ class OrderLine:
     gift_card
     store_credit
     surcharge
-    """  
+    """
     

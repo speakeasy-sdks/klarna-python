@@ -11,7 +11,9 @@ from klarna import utils
 class Attachment:
     
     body: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('body') }})
-    r"""The content of the extra merchant data should be presented as a string inside this property. The body should be an object containing any of the keys and sub-objects described below serialized to JSON. More information on that object can be found [here](https://developers.klarna.com/api/#attachment-schema)."""  
+
+    r"""The content of the extra merchant data should be presented as a string inside this property. The body should be an object containing any of the keys and sub-objects described below serialized to JSON. More information on that object can be found [here](https://developers.klarna.com/api/#attachment-schema)."""
     content_type: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content_type') }})
-    r"""The content type of the body. It is usually represented as \\"application/vnd.klarna.internal.emd-v2+json\\" """  
+
+    r"""The content type of the body. It is usually represented as \\"application/vnd.klarna.internal.emd-v2+json\\" """
     
