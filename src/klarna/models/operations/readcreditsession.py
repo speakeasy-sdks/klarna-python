@@ -11,7 +11,6 @@ from typing import Optional
 class ReadCreditSessionRequest:
     
     session_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'session_id', 'style': 'simple', 'explode': False }})
-
     r"""session_id"""
     
 
@@ -19,12 +18,8 @@ class ReadCreditSessionRequest:
 class ReadCreditSessionResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     session_read: Optional[shared_session_read.SessionRead] = dataclasses.field(default=None)
-
     r"""successful operation"""
     

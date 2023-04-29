@@ -13,24 +13,17 @@ from typing import Optional
 class PurchaseTokenRequest:
     
     authorization_token: str = dataclasses.field(metadata={'path_param': { 'field_name': 'authorizationToken', 'style': 'simple', 'explode': False }})
-
     customer_token_creation_request: Optional[shared_customer_token_creation_request.CustomerTokenCreationRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
-
     
 
 @dataclasses.dataclass
 class PurchaseTokenResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     customer_token_creation_response: Optional[shared_customer_token_creation_response.CustomerTokenCreationResponse] = dataclasses.field(default=None)
-
     r"""Token was successfully created."""
     error_v2: Optional[shared_errorv2.ErrorV2] = dataclasses.field(default=None)
-
     r"""We were unable to create a customer token with the provided data. Some field constraint was violated."""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

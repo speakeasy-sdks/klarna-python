@@ -11,12 +11,8 @@ from typing import Optional
 class CreateCreditSessionResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     merchant_session: Optional[shared_merchant_session.MerchantSession] = dataclasses.field(default=None)
-
     r"""successful operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

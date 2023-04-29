@@ -27,25 +27,18 @@ class CustomerOrganizationEntityTypeEnum(str, Enum):
 class Customer:
     
     date_of_birth: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('date_of_birth'), 'exclude': lambda f: f is None }})
-
     r"""Customer’s date of birth. The format is ‘yyyy-mm-dd’"""
     gender: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gender'), 'exclude': lambda f: f is None }})
-
     r"""Customer’s gender - ‘male’ or ‘female’"""
     last_four_ssn: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_four_ssn'), 'exclude': lambda f: f is None }})
-
     r"""Last four digits of the customer's social security number. This value is available for US customers."""
     national_identification_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('national_identification_number'), 'exclude': lambda f: f is None }})
-
     r"""The customer's national identification number. This value is available for EU customers utilizing national identification numbers."""
     organization_entity_type: Optional[CustomerOrganizationEntityTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('organization_entity_type'), 'exclude': lambda f: f is None }})
-
     r"""Organization entity type. Only applicable for B2B customers."""
     organization_registration_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('organization_registration_id'), 'exclude': lambda f: f is None }})
-
     r"""Organization registration id. Only applicable for B2B customers."""
     title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('title'), 'exclude': lambda f: f is None }})
-
     r"""Customer’s Title. Allowed values per country:
     UK - \"Mr\", \"Ms\"
     DE - \"Herr\", \"Frau\"
@@ -55,9 +48,7 @@ class Customer:
     NL: \"Dhr.\", \"Mevr.\" 
     """
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-
     r"""Type of customer in the session. If nothing is added, a B2C session will be the default. If it is a b2b-session, you should enter organization to trigger a B2B session."""
     vat_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('vat_id'), 'exclude': lambda f: f is None }})
-
     r"""VAT ID. Only applicable for B2B customers."""
     
