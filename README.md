@@ -31,7 +31,7 @@ s = klarna.Klarna(
 
 
 req = operations.CancelAuthorizationRequest(
-    authorization_token="corrupti",
+    authorization_token='corrupti',
 )
 
 res = s.authorizations.cancel(req)
