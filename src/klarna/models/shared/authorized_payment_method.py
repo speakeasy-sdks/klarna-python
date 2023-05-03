@@ -26,7 +26,7 @@ class AuthorizedPaymentMethodTypeEnum(str, Enum):
 @dataclasses.dataclass
 class AuthorizedPaymentMethod:
     
-    type: AuthorizedPaymentMethodTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})  
-    number_of_days: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_days'), 'exclude': lambda f: f is None }})  
-    number_of_installments: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_installments'), 'exclude': lambda f: f is None }})  
+    type: AuthorizedPaymentMethodTypeEnum = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    number_of_days: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_days'), 'exclude': lambda f: f is None }})
+    number_of_installments: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_installments'), 'exclude': lambda f: f is None }})
     

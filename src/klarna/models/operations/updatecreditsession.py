@@ -11,15 +11,15 @@ from typing import Optional
 class UpdateCreditSessionRequest:
     
     session_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'session_id', 'style': 'simple', 'explode': False }})
-    r"""session_id"""  
+    r"""session_id"""
     session_input: shared_session.SessionInput = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    r"""session_request"""  
+    r"""session_request"""
     
 
 @dataclasses.dataclass
 class UpdateCreditSessionResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     

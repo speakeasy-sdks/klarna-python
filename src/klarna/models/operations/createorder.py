@@ -11,16 +11,16 @@ from typing import Optional
 @dataclasses.dataclass
 class CreateOrderRequest:
     
-    authorization_token: str = dataclasses.field(metadata={'path_param': { 'field_name': 'authorizationToken', 'style': 'simple', 'explode': False }})  
-    create_order_request_input: Optional[shared_create_order_request.CreateOrderRequestInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})  
+    authorization_token: str = dataclasses.field(metadata={'path_param': { 'field_name': 'authorizationToken', 'style': 'simple', 'explode': False }})
+    create_order_request_input: Optional[shared_create_order_request.CreateOrderRequestInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass
 class CreateOrderResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+    status_code: int = dataclasses.field()
     order: Optional[shared_order.Order] = dataclasses.field(default=None)
-    r"""Order was successfully created."""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    r"""Order was successfully created."""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     

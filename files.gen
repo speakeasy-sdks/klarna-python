@@ -41,4 +41,9 @@ src/klarna/models/shared/errorv2.py
 src/klarna/models/shared/customer_token_creation_request.py
 src/klarna/models/shared/security.py
 src/klarna/models/shared/__init__.py
+docs/klarna/README.md
+docs/authorizations/README.md
+docs/orders/README.md
+docs/sessions/README.md
+docs/tokens/README.md
 USAGE.md
