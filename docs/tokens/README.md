@@ -25,9 +25,8 @@ s = klarna.Klarna(
     ),
 )
 
-
 req = operations.PurchaseTokenRequest(
-    authorization_token='nemo',
+    authorization_token='fuga',
     customer_token_creation_request=shared.CustomerTokenCreationRequest(
         billing_address=shared.Address(
             attention='Attn',
@@ -36,7 +35,7 @@ req = operations.PurchaseTokenRequest(
             email='test.sam@test.com',
             family_name='Andersson',
             given_name='Adam',
-            organization_name='minima',
+            organization_name='in',
             phone='+44795465131',
             postal_code='W1G 0PW',
             region='OH',
@@ -47,15 +46,15 @@ req = operations.PurchaseTokenRequest(
         customer=shared.Customer(
             date_of_birth='1978-12-31',
             gender='male',
-            last_four_ssn='excepturi',
-            national_identification_number='accusantium',
+            last_four_ssn='corporis',
+            national_identification_number='iste',
             organization_entity_type=shared.CustomerOrganizationEntityTypeEnum.LIMITED_PARTNERSHIP,
-            organization_registration_id='culpa',
+            organization_registration_id='saepe',
             title='Mr.',
             type='organization',
-            vat_id='doloribus',
+            vat_id='quidem',
         ),
-        description='sapiente',
+        description='architecto',
         intended_use=shared.CustomerTokenCreationRequestIntendedUseEnum.SUBSCRIPTION,
         locale='en-GB',
         purchase_country='GB',
