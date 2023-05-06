@@ -22,6 +22,7 @@ class Tokens:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def purchase(self, request: operations.PurchaseTokenRequest) -> operations.PurchaseTokenResponse:
         r"""Generate a consumer token
         Use this API call to create a Klarna Customer Token.<br/>After having obtained an `authorization_token` for a successful authorization, this can be used to create a purchase token instead of placing the order. Creating a Klarna Customer Token results in Klarna storing customer and payment method details.
