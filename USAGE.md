@@ -9,7 +9,6 @@ s = klarna.Klarna(
     ),
 )
 
-
 req = operations.CancelAuthorizationRequest(
     authorization_token='corrupti',
 )
