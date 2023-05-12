@@ -21,6 +21,7 @@ class Authorizations:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def cancel(self, request: operations.CancelAuthorizationRequest) -> operations.CancelAuthorizationResponse:
         r"""Cancel an existing authorization
         Use this API call to cancel/release an authorization. If the `authorization_token` received during a Klarna Payments won’t be used to place an order immediately you could release the authorization.
