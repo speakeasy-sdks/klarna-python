@@ -25,10 +25,9 @@ from klarna.models import operations
 
 s = klarna.Klarna(
     security=shared.Security(
-        api_key_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+        api_key_auth="YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.CancelAuthorizationRequest(
     authorization_token='corrupti',
@@ -51,12 +50,12 @@ if res.status_code == 200:
 
 ### [orders](docs/orders/README.md)
 
-* [create](docs/orders/README.md#create) - Create a new order
+* [read](docs/orders/README.md#read) - Create a new order
 
 ### [sessions](docs/sessions/README.md)
 
-* [create](docs/sessions/README.md#create) - Create a new payment session
 * [read](docs/sessions/README.md#read) - Read an existing payment session
+* [read](docs/sessions/README.md#read) - Create a new payment session
 * [update](docs/sessions/README.md#update) - Update an existing payment session
 
 ### [tokens](docs/tokens/README.md)
